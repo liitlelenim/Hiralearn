@@ -1,0 +1,7 @@
+@use "./utilities.scss" as utils;
+
+.guessing-container {
+  @include utils.absoluteCenter;
+  text-align: center;
+  border: 3px solid black;
+}

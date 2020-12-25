@@ -1,0 +1,28 @@
+.guessing-manager-container {
+  input {
+    display: block;
+    border: solid black 2px;
+    font-size: 1.5rem;
+    height: 1.5rem;
+    &:focus {
+      outline: none;
+    }
+  }
+  h2 {
+    display: inline-block;
+    width: 50%;
+    font-size: 2rem;
+  }
+  button {
+    display: block;
+    width: 100%;
+    font-size: 1.25rem;
+    height: 2rem;
+  }
+}
+.correct-answers-amount {
+  color: green;
+}
+.wrong-answers-amount {
+  color: red;
+}
