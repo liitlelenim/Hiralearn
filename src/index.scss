@@ -1,6 +1,26 @@
-#root {
-  min-height: 100vh;
+* {
+  box-sizing: border-box;
+  &::before {
+    box-sizing: border-box;
+  }
+  &::after {
+    box-sizing: border-box;
+  }
 }
-main {
-  min-height: 60vh;
+
+body {
+  background-image: url("./assets/images/cherry-blossoms-background.png");
+  background-color: rgba(black, 0.5);
+  background-blend-mode: darken;
+  background-position: center;
+  background-attachment: fixed;
+  animation: backgroundFadeIn 3s both;
+}
+@keyframes backgroundFadeIn {
+  0% {
+    background-color: rgba(black, 1);
+  }
+  100% {
+    background-color: rgba(black, 0.5);
+  }
 }

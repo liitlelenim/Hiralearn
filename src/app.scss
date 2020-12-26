@@ -1,7 +1,36 @@
 @use "./utilities.scss" as utils;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
 
 .guessing-container {
-  @include utils.absoluteCenter;
+  @include utils.absoluteCenter();
+  margin: auto;
   text-align: center;
-  border: 3px solid black;
+  background-color: #cd5d7d;
+  background-image: linear-gradient(45deg, #cd5d7d 0%, #ff93b2 100%);
+  box-shadow: 0 5px 25px black;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  min-width: 380px;
+  font-family: "Noto Sans JP", sans-serif;
+  h2 {
+    color: white;
+    text-shadow: 1px 2px 2px black;
+    font-size: 1.5rem;
+    height: 3.5rem;
+  }
+  .feedback-wrong {
+    color: rgb(255, 23, 23);
+  }
+  .feedback-correct {
+    color: rgb(0, 212, 0);
+  }
+}
+@media only screen and (max-width: 500px) {
+  .guessing-container {
+    width: 100%;
+    min-width: none;
+  }
 }
