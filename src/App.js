@@ -1,6 +1,5 @@
 import "./app.scss";
 import { useEffect, useState } from "react";
-
 import { randomKana } from "./GuessingMechanics/kana.js";
 import Header from "./Header.js";
 import SignDisplayer from "./GuessDisplayedComponents/SignDisplayer.js";
@@ -69,7 +68,7 @@ const App = () => {
           kanaToLearn={kanaToLearn}
         />
       </main>
-      <footer>Site created by Jakub Błasczyk, 2020</footer>
+      <footer>Site created by Jakub Błaszczyk, 2020</footer>
     </div>
   );
 };
