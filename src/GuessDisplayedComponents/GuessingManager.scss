@@ -1,12 +1,44 @@
 .guessing-manager-container {
   input {
     display: block;
-    width: 90%;
     margin: auto;
+    border: none;
+    background-color: inherit;
+    border-bottom: 2px solid;
+    border-color: rgb(245, 88, 88);
+    width: 60%;
+    color: white;
+    text-shadow: 1px 2px 2px black;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: width 0.3s, border-color 0.2s;
+
+    &:focus {
+      outline: none;
+      width: 90%;
+      border-color: #ff0c69;
+    }
+    &::placeholder {
+      color: rgb(206, 206, 206);
+    }
   }
   button {
-    margin: 5px auto;
+    margin: auto;
+    margin-top: 40px;
     display: block;
+    border-radius: 25px;
+    background-color: rgb(250, 45, 103);
+    border: 3px solid rgb(250, 45, 103);
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 0 2px 5px black;
+    transition: box-shadow 0.2s;
+    color: white;
+    font-size: 1.5rem;
+    &:focus {
+      border: 3px solid rgb(255, 19, 86);
+      box-shadow: 0 3px 10px black;
+      outline: none;
+    }
   }
   h2 {
     display: inline-block;

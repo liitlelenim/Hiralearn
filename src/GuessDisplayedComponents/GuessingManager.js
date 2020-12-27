@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./GuessingManager.scss";
-function GuessingManager(props) {
+const GuessingManager = (props) => {
   useEffect(() => {
     window.addEventListener("keydown", (ev) => {
       if (ev.key === "Enter") {
@@ -30,6 +30,6 @@ function GuessingManager(props) {
       </div>
     </div>
   );
-}
+};
 
 export default GuessingManager;

@@ -1,4 +1,10 @@
+@use "./utilities" as utils;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+
 * {
+  font-family: "Noto Sans JP", sans-serif;
+
   box-sizing: border-box;
   &::before {
     box-sizing: border-box;
@@ -8,14 +14,83 @@
   }
 }
 
+header {
+  button {
+    width: 25px;
+    height: 25px;
+    background: none;
+    outline: none;
+    border: none;
+    background-image: url("./assets/icons/gear-settings-icon.png");
+    background-size: cover;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    &:focus {
+      border: 1px solid #ff0c69;
+    }
+    &[toggle="true"] {
+      transform: rotate(90deg);
+    }
+    &[toggle="false"] {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
 body {
-  background-image: url("./assets/images/cherry-blossoms-background.png");
+  background-image: url("./assets/images/cherry-blossoms-background.jpg");
   background-color: rgba(black, 0.5);
   background-blend-mode: darken;
   background-position: center;
   background-attachment: fixed;
   animation: backgroundFadeIn 3s both;
 }
+
+.app-window {
+  @include utils.absoluteCenter();
+  color: white;
+
+  border-radius: 25px;
+  margin: auto;
+  text-align: center;
+  background: rgb(255, 177, 155);
+  background: linear-gradient(
+    71deg,
+    rgb(250, 146, 117) 0%,
+    rgb(253, 117, 93) 100%
+  );
+  box-shadow: 0 5px 25px black;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  min-width: 380px;
+}
+@media only screen and (max-width: 500px) {
+  .app-window {
+    width: 100%;
+    min-width: none;
+    border-radius: 0;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    71deg,
+    rgb(250, 146, 117) 0%,
+    rgb(253, 117, 93) 100%
+  );
+  color: white;
+  text-shadow: 1px 2px 4px black;
+  text-align: center;
+  box-shadow: black 0px -5px 20px;
+}
+
 @keyframes backgroundFadeIn {
   0% {
     background-color: rgba(black, 1);

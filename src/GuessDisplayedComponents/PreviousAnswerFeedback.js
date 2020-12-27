@@ -1,4 +1,4 @@
-function PreviousAnswerFeedback(props) {
+const PreviousAnswerFeedback = (props) => {
   switch (props.outcome) {
     case "correct": {
       return <h2 className="feedback-correct">Your answer was correct.</h2>;
@@ -16,5 +16,5 @@ function PreviousAnswerFeedback(props) {
       return <h2>Translate this sign to Romaji...</h2>;
     }
   }
-}
+};
 export default PreviousAnswerFeedback;
