@@ -11,7 +11,7 @@ const GuessingManager = ({
         guess(document.querySelector("#answer-input"));
       }
     });
-  }, []);
+  });
   return (
     <div className="guessing-manager-container">
       <input
