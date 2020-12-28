@@ -1,10 +1,14 @@
 import { useEffect } from "react";
 import "./GuessingManager.scss";
-const GuessingManager = (props) => {
+const GuessingManager = ({
+  guess,
+  correctAnswersAmount,
+  wrongAnswersAmount,
+}) => {
   useEffect(() => {
     window.addEventListener("keydown", (ev) => {
       if (ev.key === "Enter") {
-        document.querySelector("#submit-answer-btn").click();
+        guess(document.querySelector("#answer-input"));
       }
     });
   }, []);
@@ -19,14 +23,14 @@ const GuessingManager = (props) => {
       <button
         id="submit-answer-btn"
         onClick={() => {
-          props.guess(document.querySelector("#answer-input"));
+          guess(document.querySelector("#answer-input"));
         }}
       >
         Submit answer
       </button>
       <div>
-        <h2 className="correct-answers-amount">{props.correctAnswersAmount}</h2>
-        <h2 className="wrong-answers-amount">{props.wrongAnswersAmount}</h2>
+        <h2 className="correct-answers-amount">{correctAnswersAmount}</h2>
+        <h2 className="wrong-answers-amount">{wrongAnswersAmount}</h2>
       </div>
     </div>
   );

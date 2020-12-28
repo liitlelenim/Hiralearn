@@ -1,10 +1,10 @@
-const Header = (props) => {
+const Header = ({ toggleSettingsWindow }) => {
   return (
     <header>
       <button
         className="settings-btn"
         onClick={() => {
-          props.toggleSettingsWindow();
+          toggleSettingsWindow();
         }}
       ></button>
     </header>

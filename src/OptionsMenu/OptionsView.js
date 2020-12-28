@@ -1,7 +1,7 @@
 import "./OptionsMenu.scss";
 
-const OptionsView = (props) => {
-  if (props.display) {
+const OptionsView = ({ display, setKanaToLearn, kanaToLearn }) => {
+  if (display) {
     return (
       <div className="options-view app-window">
         <h2>Settings</h2>
@@ -11,8 +11,8 @@ const OptionsView = (props) => {
           </label>
           <select
             id="kana-choose"
-            onChange={(e) => props.setKanaToLearn(e.target.value)}
-            value={props.kanaToLearn}
+            onChange={(e) => setKanaToLearn(e.target.value)}
+            value={kanaToLearn}
           >
             <option>Hiragana</option>
             <option>Katakana</option>

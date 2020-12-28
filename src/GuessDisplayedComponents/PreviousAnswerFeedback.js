@@ -1,5 +1,5 @@
-const PreviousAnswerFeedback = (props) => {
-  switch (props.outcome) {
+const PreviousAnswerFeedback = ({ outcome, previousQuestion }) => {
+  switch (outcome) {
     case "correct": {
       return <h2 className="feedback-correct">Your answer was correct.</h2>;
     }
@@ -8,7 +8,7 @@ const PreviousAnswerFeedback = (props) => {
         <h2 className="feedback-wrong">
           The correct answer was:
           <br />
-          {props.previousQuestion["Romaji"]}
+          {previousQuestion["Romaji"]}
         </h2>
       );
     }

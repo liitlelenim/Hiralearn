@@ -1,9 +1,9 @@
 import "./SignDisplayer.scss";
 
-const SignDisplayer = (props) => {
+const SignDisplayer = ({ sign }) => {
   return (
     <div>
-      <h1>{props.sign}</h1>
+      <h1>{sign}</h1>
     </div>
   );
 };
